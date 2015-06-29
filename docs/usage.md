@@ -7,7 +7,7 @@ Constructing the Engage Object
 At a bare minimum to use this library, you need an Engage pod number, OAuth Client Id, OAuth Client Secret, and OAuth Refresh Token. (Please see the file [preparation.md](docs/preparation.md) for instructions on establishing these credentials.) You can create an Engage object like this:
 
 ```js
-var Engage = require('engage');
+var Engage = require('engage-api');
 var engage = Engage({
     pod: 1,
     oAuthClientId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
