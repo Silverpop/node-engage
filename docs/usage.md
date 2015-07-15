@@ -10,9 +10,9 @@ At a bare minimum to use this library, you need an Engage pod number, OAuth Clie
 var Engage = require('engage-api');
 var engage = Engage({
     pod: 1,
-    oAuthClientId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-    oAuthClientSecret: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-    oAuthRefreshToken: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+    oAuthClientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    oAuthClientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    oAuthRefreshToken: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 });
 ```
 
@@ -21,9 +21,9 @@ If you will be working with any Engage data jobs, you probably also want to spec
 ```js
 var engage = Engage({
     pod: 1,
-    oAuthClientId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-    oAuthClientSecret: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-    oAuthRefreshToken: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+    oAuthClientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    oAuthClientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    oAuthRefreshToken: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     sftpPrivateKeyPath: __dirname + '/sftp.key'
 });
 ```
