@@ -14,7 +14,7 @@ For additional information, see the following files under the [docs](docs) subdi
 Contributing
 ------------
 
-Pull requests are welcome, but we can only accept them if the contributor has signed off on the [Developer's Certificate of Origin 1.1 (DCO)](DCO1.1txt). To indicate signoff, your commit message should include a developer sign-off including your full name and email address in the following format:
+Pull requests are welcome, but we can only accept them if the contributor has signed off on the [Developer's Certificate of Origin 1.1 (DCO)](DCO1.1.txt). To indicate signoff, your commit message should include a developer sign-off including your full name and email address in the following format:
 
 ```
 DCO 1.1 Signed-off-by: Joe Lafiosca <jlafiosc@us.ibm.com>
