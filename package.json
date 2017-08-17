@@ -1,33 +1,34 @@
 {
-    "name": "engage-api",
-    "version": "0.1.4",
-    "description": "Library for interacting with Silverpop Engage API",
-    "main": "./lib/engage",
-    "directories": {
-        "lib": "./lib",
-        "doc": "./docs"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "silverpop",
-        "engage",
-        "api"
-    ],
-    "author": "Joe Lafiosca <jlafiosc@us.ibm.com>",
-    "contributors": [
-        "Eric Hutson <ehutson@us.ibm.com>"
-    ],
-    "license": "MIT",
-    "repository": "Silverpop/node-engage",
-    "bugs": "https://github.com/Silverpop/node-engage/issues",
-    "dependencies": {
-        "csv": "^0.4.1",
-        "js2xmlparser": "^0.1.9",
-        "oauth": "^0.9.12",
-        "ssh2": "^0.4.6",
-        "tmp": "0.0.25",
-        "xml2js": "^0.4.6"
-    }
+  "name": "engage-api",
+  "version": "0.1.4",
+  "description": "Library for interacting with Silverpop Engage API",
+  "main": "./lib/engage",
+  "directories": {
+    "lib": "./lib",
+    "doc": "./docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "silverpop",
+    "engage",
+    "api"
+  ],
+  "author": "Joe Lafiosca <jlafiosc@us.ibm.com>",
+  "contributors": [
+    "Eric Hutson <ehutson@us.ibm.com>"
+  ],
+  "license": "MIT",
+  "repository": "Silverpop/node-engage",
+  "bugs": "https://github.com/Silverpop/node-engage/issues",
+  "dependencies": {
+    "csv": "^0.4.1",
+    "js2xmlparser": "^0.1.9",
+    "node-file-cache": "^1.0.2",
+    "oauth": "^0.9.12",
+    "ssh2": "^0.4.6",
+    "tmp": "0.0.25",
+    "xml2js": "^0.4.6"
+  }
 }
