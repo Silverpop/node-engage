@@ -24,7 +24,7 @@ var engage = Engage({
     oAuthClientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     oAuthClientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     oAuthRefreshToken: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    cacheRefreshTokens: true,
+    cacheAccessTokens: true,
     cacheFile: __dirname + '/cache'
 });
 ```
