@@ -176,3 +176,31 @@ engage.waitForJob(12345, function(err, job) {
 });
 ```
 
+XML Transact API Methods
+---------------
+
+Transact XML API provides a mechanism for generating high volume, personalized messages.
+
+### executeTransact
+
+parameter          | required? | type             | description
+-------------      | --------- | ---------------- | -----------
+campaignId         | yes       | positive integer | Transact uses the Campaign ID to map the content to the Group of Automated Messages.
+transactionId      | no        | positive integer | Optional parameter that is used by the sender for uniquely identifying a transaction.
+email              | yes       | non empty string | Contains the email address to which the transactional email is sent (recipient).
+showAllSendDetails | no        | boolean          | Sets the level of logging for all emails that are sent in the current submission. Default: false
+sendAsBatch        | no        | boolean          | Notifies Transact that it does not need to send the submission in real time; it can run it as a batch job. Default: false
+noRetryOnFailure   | no        | boolean          | If the system encounters an error during the sending process (for example, PMTA failure, or is offline), it does not retry sending the message. Default: false
+bodyType           | no        | string           | An optional parameter to define if this is an HTML only or TEXT only. Default: HTML
+saveColumns        | no        | scalar hash      | Optional list of column names from the recipient elements to save to the database in.
+personalization    | yes        | scalar hash     | At least one personalization block is required for providing the content for the email to be sent. Each Personalization element contains one name-value pair.
+
+Example:
+
+```js
+engage.executeTransact({campaignId: 1234567, email: 'example@example.com', personalization: {firstName : 'John', lastName: 'Doe', age: '18'}, saveColumns: ['firstName', lastName]}, function(err) {
+    if (err) {
+        console.log('Failed to execute the request');
+    }
+});
+```
