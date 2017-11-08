@@ -26,7 +26,7 @@
     "csv": "^0.4.1",
     "js2xmlparser": "^0.1.9",
     "node-file-cache": "^1.0.2",
-    "oauth": "^0.9.12",
+    "querystring": "^0.2.0",
     "ssh2": "^0.4.6",
     "tmp": "0.0.25",
     "xml2js": "^0.4.6"
