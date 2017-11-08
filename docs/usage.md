@@ -15,7 +15,19 @@ var engage = Engage({
     oAuthRefreshToken: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 });
 ```
+When logging into Engage, this library requests an OAuth authentication token.  By default, this token is cached in memory until it expires so that we do not continue to request new tokens for every API call.  However, if you are in a position where you need to run many short-lived API calls, it can be helpful to cache the authentication tokens to disk so that they can be reused.  You can do this by adding two additional parameters to your Engage object:
 
+```js
+var Engage = require('engage-api');
+var engage = Engage({
+    pod: 1,
+    oAuthClientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    oAuthClientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    oAuthRefreshToken: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    cacheAccessTokens: true,
+    cacheFile: __dirname + '/cache'
+});
+```
 If you will be working with any Engage data jobs, you probably also want to specify an Engage SFTP private key file path. (Again, see [preparation.md](docs/preparation.md) for more details.) With the SFTP key, the constructor looks something like this:
 
 ```js
@@ -27,6 +39,8 @@ var engage = Engage({
     sftpPrivateKeyPath: __dirname + '/sftp.key'
 });
 ```
+
+
 
 Calling Engage API Methods
 --------------------------
