@@ -1,7 +1,7 @@
 {
-  "name": "engage-api",
+  "name": "watson-campaign-automation-api",
   "version": "0.1.6",
-  "description": "Library for interacting with Silverpop Engage API",
+  "description": "Library for interacting with Watson Campaign Automation API",
   "main": "./lib/engage",
   "directories": {
     "lib": "./lib",
@@ -15,8 +15,8 @@
     "engage",
     "api"
   ],
-  "author": "Joe Lafiosca <jlafiosc@us.ibm.com>",
   "contributors": [
+    "Joe Lafiosca <jlafiosc@us.ibm.com>",
     "Eric Hutson <ehutson@us.ibm.com>"
   ],
   "license": "MIT",
