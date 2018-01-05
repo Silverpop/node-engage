@@ -10,8 +10,8 @@ Each of the XML API method calls corresponds directly to an XML API method as do
 
 parameter     | required? | type             | description
 ------------- | --------- | ---------------- | -----------
-contactId     | no        | positive integer | Engage recipient id to add to contact list
-contactListId | yes       | positive integer | Engage contact list id to have contact added to
+contactId     | no        | positive integer | Watson Campaign Automation recipient id to add to contact list
+contactListId | yes       | positive integer | Watson Campaign Automation contact list id to have contact added to
 columns       | no        | scalar hash      | Key column values identifying recipient to add to contact list
 
 Either **contactId** or **columns** must be included.
@@ -40,8 +40,8 @@ engage.addContactToContactList({columns: {"Customer Num": 12345, "Order Num": 67
 
 parameter | required? | type             | description
 --------- | --------- | ---------------- | -----------
-contactId | yes       | positive integer | Engage recipient id to add to program
-programId | yes       | positive integer | Engage program id to add recipient to
+contactId | yes       | positive integer | Watson Campaign Automation recipient id to add to program
+programId | yes       | positive integer | Watson Campaign Automation program id to add recipient to
 
 Example: add recipient id 1234567 to program id 54321:
 
@@ -57,14 +57,14 @@ engage.addContactToProgram({contactId: 1234567, programId: 54321}, function(err)
 
 parameter     | required? | type                     | description
 ------------- | --------- | ------------------------ | -----------
-listId        | yes       | positive integer         | Engage database id to export
+listId        | yes       | positive integer         | Watson Campaign Automation database id to export
 exportType    | no        | **Engage.EXPORT_TYPE**   | Which recipients to export (default: **Engage.EXPORT_TYPE.ALL**)
 exportFormat  | no        | **Engage.EXPORT_FORMAT** | Export file format (default: **Engage.EXPORT_FORMAT.CSV**)
 dateStart     | no        | date string              | Recipient last modified date range start
 dateEnd       | no        | date string              | Recipient last modified date range end
 exportColumns | no        | string array             | Specific columns to export
 
-Returns an object containing jobId and filePath for an Engage database export data job. The jobId can be polled with getJobStatus until complete. The filePath refers to a location in the corresponding Engage SFTP account.
+Returns an object containing jobId and filePath for an Watson Campaign Automation database export data job. The jobId can be polled with getJobStatus until complete. The filePath refers to a location in the corresponding Watson Campaign Automation SFTP account.
 
 Export list id 12345 in tab-delimited format:
 
@@ -83,9 +83,9 @@ engage.exportList({listId: 12345, exportFormat: Engage.EXPORT_FORMAT.TAB}, funct
 
 parameter | required? | type             | description
 --------- | --------- | ---------------- | -----------
-jobId     | yes       | positive integer | Engage data job id to get status of
+jobId     | yes       | positive integer | Watson Campaign Automation data job id to get status of
 
-Returns an object containing jobId, jobStatus, jobDescription, and optionally result parameters for a completed Engage data job. The jobStatus is an **Engage.JOB_STATUS** enum value indicating the state of the job, such as completed or running.
+Returns an object containing jobId, jobStatus, jobDescription, and optionally result parameters for a completed Watson Campaign Automation data job. The jobStatus is an **Engage.JOB_STATUS** enum value indicating the state of the job, such as completed or running.
 
 Get job status for data job id 12345:
 
