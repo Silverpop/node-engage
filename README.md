@@ -1,5 +1,7 @@
-node-engage
+Watson Campaign Automation API
 ===========
+
+**NOTE:  The NPM package name for this library has been changed from `engage-api` to `watson-campaign-automation-api`.  You will need to update the dependency in package.json if you wish to continue to have access to the latest revisions of the library.**
 
 This is a node.js library for interacting with the IBM Marketing Cloud (previously known as Silverpop Engage). It is not an exhaustive implementation of the IBM Marketing Cloud API. Rather, it provides an extensible base for implementing API method functionality, and it is intended to give potential IBM Marketing Cloud API developers a good starting place for their Node.js projects. This project is maintained by engineers from the IBM Marketing Cloud Professional Services department in our spare time, and other developers are welcome to fork new versions.
 
