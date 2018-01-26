@@ -53,6 +53,26 @@ engage.addContactToProgram({contactId: 1234567, programId: 54321}, function(err)
 });
 ```
 
+### calculateQuery
+
+parameter | required? | type             | description
+--------- | --------- | ---------------- | -----------
+queryId   | yes       | positive integer | Watson Campaign Automation query id to be calculated
+email     | no        | string           | E-Mail address for job id response
+
+Example: calculate query 123456:
+
+```js
+engage.calculateQuery({queryId: 123456, email: 'john.doe@us.ibm.com'}, function(err, job) {
+    if (err) {
+        console.log('Failed to calculate query');
+    } else {
+        console.log('Now we should wait for jobId ' + job.jobId + ' to export file ' + job.filePath);
+        ...
+    }
+});
+```
+
 ### exportList
 
 parameter     | required? | type                     | description
