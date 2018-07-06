@@ -284,7 +284,8 @@ sendAsBatch        | no        | boolean          | Notifies Transact that it do
 noRetryOnFailure   | no        | boolean          | If the system encounters an error during the sending process (for example, PMTA failure, or is offline), it does not retry sending the message. Default: false
 bodyType           | no        | string           | An optional parameter to define if this is an HTML only or TEXT only. Default: HTML
 saveColumns        | no        | scalar hash      | Optional list of column names from the recipient elements to save to the database in.
-personalization    | yes        | scalar hash     | At least one personalization block is required for providing the content for the email to be sent. Each Personalization element contains one name-value pair.
+personalization    | no        | scalar hash      | At least one personalization block is required for providing the content for the email to be sent. Each Personalization element contains one name-value pair.
+scriptContext      | no        | object           | Optional block to provide a data object for scripting.
 
 Example:
 
