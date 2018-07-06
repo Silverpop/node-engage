@@ -58,7 +58,7 @@ engage.addContactToProgram({contactId: 1234567, programId: 54321}, function(err)
 parameter     | required? | type             | description
 ------------- | --------- | ---------------- | -----------
 listId        | yes       | positive integer | The ID of the database to which you are adding the contact
-createdFrom   | yes       | positive integer | Value indicating the way in which you are adding the contact to the system.  Values include:  0 - imported from a database, 1 - added manually, 2 - opted in, 3 - created from tracking database
+createdFrom   | yes       | positive integer | Value indicating the way in which you are adding the contact to the system.  Values include:  0 - imported from a database, 1 - added manually, 2 - opted in, 3 - created from tracking database.  See Engage.CREATED_FROM.
 sendAutoReply | no        | boolean          | If the database has an autoresponder associated with it and sendAutoReply is set to true, Watson Campaign Automation sends the confirmation when the contact is added to the database.
 updateIfFound | no        | boolean          | If true, attempting to add a contact with a duplicate key will result in an update to their record.  If the database is a flexible database and the value is set to true, attempting to add a contact with duplicate SYNC_FIELDS will result in an update to the record.
 allowHtml     | no        | boolean          | If true, Watson Campaign Automation will interpret - and properly render - HTML within  a value in the text field.  The default value is false and will convert HTML tags to character entity references.
