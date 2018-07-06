@@ -53,6 +53,38 @@ engage.addContactToProgram({contactId: 1234567, programId: 54321}, function(err)
 });
 ```
 
+### addRecipient
+
+parameter     | required? | type             | description
+------------- | --------- | ---------------- | -----------
+listId        | yes       | positive integer | The ID of the database to which you are adding the contact
+createdFrom   | yes       | positive integer | Value indicating the way in which you are adding the contact to the system.  Values include:  0 - imported from a database, 1 - added manually, 2 - opted in, 3 - created from tracking database
+sendAutoReply | no        | boolean          | If the database has an autoresponder associated with it and sendAutoReply is set to true, Watson Campaign Automation sends the confirmation when the contact is added to the database.
+updateIfFound | no        | boolean          | If true, attempting to add a contact with a duplicate key will result in an update to their record.  If the database is a flexible database and the value is set to true, attempting to add a contact with duplicate SYNC_FIELDS will result in an update to the record.
+allowHtml     | no        | boolean          | If true, Watson Campaign Automation will interpret - and properly render - HTML within  a value in the text field.  The default value is false and will convert HTML tags to character entity references.
+visitorKey    | no        | string           | Allows specifying a visitor key to associate a contact to a previously unknown visitor when using the Web Tracking feature.
+contactLists  | no        | string array     | If provided, the recipient will be added to the list of contact list ids.
+syncFields    | no        | scalar hash      | Field names and values that uniqely identify a contact within a Flexible database.
+columns       | no        | scalar hash      | Key column values identifying recipient to add to database
+
+Example:  add recipient somebody@domain.com to contact lists 2398723 and 2938725.
+
+```js
+engage.addRecipient({
+        listId: 85628, 
+        createdFrom: Engage.CREATED_FROM.IMPORT,
+        contactLists: [2398723, 2938725],
+        columns: {'Customer ID': '123456789', 'EMAIL': 'somebody@domain.com'}
+    }, function(err, result) {
+    if(err) {
+        console.log('Failed to add recipient');
+    } else {
+        console.log('Added recipient ' + result.recipientId);
+    }
+
+});
+```
+
 ### calculateQuery
 
 parameter | required? | type             | description
@@ -72,6 +104,11 @@ engage.calculateQuery({queryId: 123456, email: 'john.doe@us.ibm.com'}, function(
     }
 });
 ```
+
+### doubleOptInRecipient
+
+[undocumented]
+
 
 ### exportList
 
@@ -127,6 +164,31 @@ engage.getJobStatus(12345, function(err, job) {
 
 [undocumented]
 
+### getSentMailingsForOrg
+
+[undocumented]
+
+### importList
+
+[undocumented]
+
+### insertUpdateRelationalTable
+
+[undocumented]
+
+### loadUserProfile
+
+[undocumented]
+
+### optOutRecipient
+
+[undocumented]
+
+### rawRecipientDataExport
+
+[undocumented]
+
+
 ### selectRecipientData
 
 [undocumented]
@@ -174,6 +236,15 @@ engage.exportListForEach(exportOptions, function(err) {
     }
 });
 ```
+
+### getOrganizationName
+
+[undocumented]
+
+### getUserName
+
+[undocumented]
+
 
 ### waitForJob
 
