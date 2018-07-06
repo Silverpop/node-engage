@@ -1,6 +1,6 @@
 {
   "name": "watson-campaign-automation-api",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Library for interacting with Watson Campaign Automation API",
   "main": "./lib/engage",
   "directories": {
